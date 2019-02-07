@@ -2,6 +2,8 @@
 
 import pyperclip, re
 
+# Create phone regex.
+
 phoneRegex = re.compile(r'''(
 (\d{3})|\(\d{3}\)?              # area code
 (\s|-|\.)?                      # separator
@@ -11,6 +13,7 @@ phoneRegex = re.compile(r'''(
 (\s*(ext|x|ext.)\s*\d{2,5})?    # extension
 )''',re.VERBOSE)
 
+# Create email regex.
 
 emailRegex = re.compile(r'''(
 [a-zA-Z0-9._%+-]+               # username
@@ -18,6 +21,14 @@ emailRegex = re.compile(r'''(
 [a-zA-Z0-9.-]+                  # domain name
 (\.[a-zA-Z]{2,4})               # dot-something
 )''',re.VERBOSE)
+
+# Find matches in clipboard text.
+
+text = str(pyperclip.paste())
+matches = []
+
+for groups in phoneRegex.findall(text):
+    phoneNum = 
 
 # TODO: Find matches in clipboard text.
 
