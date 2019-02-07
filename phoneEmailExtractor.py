@@ -36,33 +36,41 @@ for groups in phoneRegex.findall(text):
 for groups in emailRegex.findall(text):
     matches.append(groups[0])
 
+# Join and copy matches to the clipboard.
+
+joinedMatches = ', '.join(matches)
+pyperclip.copy(joinedMatches)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-# TODO: Find matches in clipboard text.
 
 # TODO: Copy results to the clipboard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
