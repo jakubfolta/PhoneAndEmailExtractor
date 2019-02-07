@@ -38,18 +38,13 @@ for groups in emailRegex.findall(text):
 
 # Join and copy matches to the clipboard.
 
-joinedMatches = ', '.join(matches)
-pyperclip.copy(joinedMatches)
-print(joinedMatches)
-
-if matches == []:
-    print('There are no matches in the text.')
-
-
-
-
-
-# TODO: Copy results to the clipboard.
+if len(matches) > 0:
+    pyperclip.copy('/n'.join(matches))
+    print('Matches copied to clipboard.')
+    print('Matches found: + '/n' + '/n'.join(matches)')
+else:
+    print('No matches found!')
+    
 
 
 
