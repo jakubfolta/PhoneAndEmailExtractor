@@ -29,8 +29,8 @@ matches = []
 
 for groups in phoneRegex.findall(text):
     phoneNum = '-'.join([groups[1], groups[3], groups[5]])
-    if groups[8] != '':
-        phoneNum += ' x' + groups[8]
+    if groups[6] != '':
+        phoneNum += ' x' + groups[6]
     matches.append(phoneNum)
 
 for groups in emailRegex.findall(text):
@@ -39,11 +39,13 @@ for groups in emailRegex.findall(text):
 # Join and copy matches to the clipboard.
 
 if len(matches) > 0:
-    pyperclip.copy('/n'.join(matches))
+    pyperclip.copy('\n'.join(matches))
     print('Matches copied to clipboard.')
-    print('Matches found: + '/n' + '/n'.join(matches)')
+    print('Matches found: ' + '\n' + '\n'.join(matches))
 else:
     print('No matches found!')
+
+te = input()
     
 
 
