@@ -40,6 +40,11 @@ for groups in emailRegex.findall(text):
 
 joinedMatches = ', '.join(matches)
 pyperclip.copy(joinedMatches)
+print(joinedMatches)
+
+if matches == []:
+    print('There are no matches in the text.')
+
 
 
 
