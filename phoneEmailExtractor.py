@@ -5,7 +5,7 @@ import pyperclip, re
 # Create phone regex.
 
 phoneRegex = re.compile(r'''(
-(\d{3}|\(\d{3}\))?               # area code
+(\d{3}|\(\d{3}\))?              # area code
 (\s|-|\.)?                      # separator
 (\d{3})                         # first 3 digits
 (\s|-|\.)?                      # separator
@@ -41,40 +41,6 @@ for groups in emailRegex.findall(text):
 if len(matches) > 0:
     pyperclip.copy('\n'.join(matches))
     print('Matches copied to clipboard.')
-    print('Matches found: ' + '\n' )
+    print('Matches found: ' + '\n' + '\n'.join(matches))
 else:
     print('No matches found!')
-
-te = input()
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
